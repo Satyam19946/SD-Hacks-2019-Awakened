@@ -6,4 +6,5 @@ app_name = 'driverDatabase'
 urlpatterns = [
     path('', views.index, name='index'),
     path('<int:driver_id>', views.driverDetail, name='driverDetail'),
+
 ]

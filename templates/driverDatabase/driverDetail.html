@@ -1,18 +1,15 @@
 {% extends 'base.html' %}
+
 {% block content %}
-
-<a href="{% url 'driverDatabase:index %}" class="btn btn-primary btn-sm"> Go back to Drivers </a>
-<h1 class="text-center-mb-3"> Curent Drivers</h1>
-
-<div class="card mb-3">
-            <div class="card-body">
-                <p class="lead">{{ driver.name_text }}</p>
-                <p class="lead">{{ driver.date }}</p>
-                <p class="lead">{{ driver.end_date }}</p>                       
+    <h1 class="text-center-mb-3"> This Drivers Rides </h1>
+    {% if thisDriversRides %}
+        {% for ride in thisDriversRides %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <p class="lead"> Ride started at {{ ride.date }} ended at {{ ride.end_date }} </p>
+                </div>
             </div>
-        </div>
         {% endfor %}
-    {% else %}
-        <p> No one drove this car </p>
     {% endif %}
+    <a href="{% url 'driverDatabase:index' %}" class="btn btn-primary btn-sm"> Go back to the list of Drivers </a>
 {% endblock %}
