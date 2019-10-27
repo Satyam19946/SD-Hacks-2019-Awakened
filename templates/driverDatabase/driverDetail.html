@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <a href="{% url 'driverDatabase:'' %}" 
-    class="btn btn-primary btn-sm"> Go back to Drivers </a>
-    <h1 class="text-center-mb-3"> Curent Drivers</h1>
-        <div class="card mb-3">
+<a href="{% url 'driverDatabase:index %}" class="btn btn-primary btn-sm"> Go back to Drivers </a>
+<h1 class="text-center-mb-3"> Curent Drivers</h1>
+
+<div class="card mb-3">
             <div class="card-body">
                 <p class="lead">{{ driver.name_text }}</p>
                 <p class="lead">{{ driver.date }}</p>

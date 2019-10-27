@@ -13,4 +13,4 @@ def index(request):
 
 def driverDetail( request, driver_id ):
     driver = get_object_or_404( Driver, pk=driver_id)
-    return render( request, 'driverDatabase/driverDetail.html', { 'driver':driver })
+    return render( request, 'driverDatabase/driverDetail.html')
